@@ -1,0 +1,35 @@
+:root {
+  --preto: #000000;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  background-color: #d0e8ff; /* azul bem claro */
+  width: 65%;
+  margin: 20px auto 0; /* centralizado na horizontal e com margem superior */
+  padding: 20px;
+  border-radius: 8px; /* opcional: só pra ficar mais bonito */
+}
+
+.teste {
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.teste::placeholder {
+  color: #121212
+}
+
+.botaoEnviar {
+  flex: 1;
+  justify-self: center
+  background-color: #000000;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
