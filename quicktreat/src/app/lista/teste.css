@@ -1,29 +1,84 @@
 :root {
   --preto: #000000;
 }
+
+body{
+  background-color: #167BA7
+}
+
+.fundo-branco{
+  background-color: #ffffff;
+  margin: 7px;
+  height: 98.5vh
+}
+
+.titulo {
+  margin-left: 5%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.navbar {
+  background-color: #1976a5; /* azul semelhante ao da imagem */
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 40px; /* ajuste conforme o tamanho ideal da logo */
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.menu-link:hover {
+  opacity: 0.8;
+}
+
 .container {
   display: flex;
   gap: 20px;
-  background-color: #d0e8ff; /* azul bem claro */
+  background-color: #167BA7;
   width: 65%;
-  margin: 20px auto 0; /* centralizado na horizontal e com margem superior */
+  margin-left: 10%;
   padding: 20px;
-  border-radius: 8px; /* opcional: só pra ficar mais bonito */
+  border-radius: 8px;
 }
 
 .teste {
   background-color: #ffffff;
+  color: #000000;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   border: 1px solid #ccc;
-  border-radius: 2px;
+  border-radius: 6px;
+  width: 100%; 
+  max-width: 200px; 
+  box-sizing: border-box; 
 }
+
 .teste::placeholder {
-  color: #121212
+  color: #121212; /* cinza clarinho */
 }
 
 .botaoEnviar {
-  flex: 1;
+  display: flex;
   justify-self: center
   background-color: #000000;
   width: 300px;
@@ -33,3 +88,28 @@
   border: 1px solid #ccc;
   border-radius: 2px;
 }
+
+ul {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebra de linha */
+  gap: 20px; /* Espaçamento entre os cards */
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  list-style: none;
+  border-radius: 8px;
+  margin: auto;
+  width: 80%;
+  justify-content: center;
+}
+
+li {
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 6px;
+  width: 45%; /* Cada item ocupa 45% do container */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
