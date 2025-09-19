@@ -16,12 +16,12 @@ export async function GET() {
 export async function POST(req, res) {
   try {
     const body = await req.json();
-    const { nome, cpf, data_nascimento, telefone, email, endereco } = body;
+    const { nome_completo, cpf, data_nascimento, telefone, email, endereco } = body;
     const { data, error } = await supabase
       .from('pacientes')
       .insert([
         {
-          nome,
+          nome_completo,
           cpf,
           data_nascimento,
           telefone,

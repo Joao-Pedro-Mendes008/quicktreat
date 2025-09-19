@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 })
 
 import Navbar from '../components/navbar'
-import '../lista/teste.css'
+import '../pacientes/teste.css'
 import { useEffect, useState } from "react";
 
 export default function Pacientes() {
@@ -63,7 +63,7 @@ export default function Pacientes() {
 
   return (
     <body className={montserrat.className}>
-      <Navbar/>
+      <Navbar />
       <div className={"fundo-branco"}>
         <h1 className='titulo'>Adicionar pacientes:</h1>
         <form onSubmit={addPacientes}>
@@ -97,8 +97,8 @@ export default function Pacientes() {
               className="teste"
             />
             <input
-              type="date"
-              placeholder="Data de Nascimento"
+              type="text"
+              placeholder="DD/MM/AA"
               value={dtNasc}
               onChange={(e) => setDtNasc(e.target.value)}
               className="teste"
@@ -111,19 +111,20 @@ export default function Pacientes() {
               className="teste"
             />
           </div>
-          <button type="submit" className='botaoEnviar'>
-            Adicionar
-          </button>
+          <div class="centraliza-botao">
+            <button className="botaoEnviar">Enviar</button>
+          </div>
         </form>
 
-
-        <ul>
-          {pacientes.map((p) => (
-            <li key={p.id}>
-              Nome: {p.nome} <br /> Email: {p.email} <br /> Telefone: {p.telefone} <br />
-            </li>
-          ))}
-        </ul>
+        <div className='ul-container'>
+          <ul>
+            {pacientes.map((p) => (
+              <li key={p.id}>
+                Nome: {p.nome} <br /> Email: {p.email} <br /> Telefone: {p.telefone} <br />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </body>
   );
