@@ -23,16 +23,12 @@ export async function POST(req, res) {
         {
           nome_completo,
           cpf,
-          data_nascimento,
-          telefone,
-          email,
-          endereco,
         },
       ]);
     if (error) {
       return NextResponse.json({ err: error.message }, { status: 400 });
     }
-    return NextResponse.json({ message: 'paciente inserido!' , data})
+    return NextResponse.json({ message: 'paciente inserido!' , data}, {status: 200})
   } catch (err) {
     return (NextResponse.json({ error: err.message }), { status: 500 })
   }
